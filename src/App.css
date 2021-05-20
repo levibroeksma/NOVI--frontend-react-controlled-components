@@ -1,1 +1,46 @@
-/*Schrijf hier jouw css voor jouw formulier*/
+#root > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div form {
+    max-width: 800px;
+    min-width: 400px;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+form fieldset legend {
+    font-weight: bold;
+}
+
+form textarea {
+    width: 100%;
+    padding: 0;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+ form input {
+     margin-bottom: 20px;
+ }
+
+form input:last-child {
+    margin-bottom: 0;
+}
+
+form select {
+    margin-bottom: 20px;
+}
+
+form button {
+    width: 100%;
+}
