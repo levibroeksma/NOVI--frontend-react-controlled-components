@@ -6,11 +6,20 @@ function App() {
     const [ageValue, setAgeValue] = React.useState('');
     const [foundValue, setFoundValue] = React.useState('');
     const [reviewValue, setReviewValue] =React.useState('');
-    const onSubmit = data => console.log(data);
-
+    // const onSubmit = data => console.log(data);
+    const submitHandler = (event) => {
+        event.preventDefault();
+        const pushDataToConsole = {
+            name: nameValue,
+            age: ageValue,
+            locationFound: foundValue,
+            yourReview: reviewValue
+        }
+        console.log(pushDataToConsole);
+    };
   return (
     <div>
-        <form onSubmit={}>
+        <form onSubmit={submitHandler}>
             <fieldset>
                 <legend>Gegevens</legend>
                 <label htmlFor="name">Naam:</label>
@@ -41,6 +50,7 @@ function App() {
                     value={foundValue}
                     onChange={(e) => setFoundValue(e.target.value)}
                 >
+                    <option value="" disabled>Kies een opties...</option>
                     <option value="google">Google</option>
                     <option value="vriend">Vriend</option>
                     <option value="advertentie">Advertentie</option>
